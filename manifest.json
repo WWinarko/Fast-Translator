@@ -1,0 +1,19 @@
+{
+    "name": "Fast Translator",
+    "description": "A free and fast translation from English to selected languages",
+    "version": "1.0",
+    "manifest_version": 2,
+   "browser_action": {
+       "default_popup": "popup.html"
+   },
+   "background": {
+       "scripts": ["background.js"]
+   },
+   "content_scripts": [
+       {
+           "matches": ["<all_urls>"],
+           "js": ["content.js"]
+       }
+  ],
+  "permissions": ["<all_urls>", "tabs", "activeTab", "storage", "webRequest", "webRequestBlocking", "geolocation", "*://*/*"]
+  }
