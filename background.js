@@ -77,14 +77,14 @@ chrome.tabs.onActivated.addListener(function(id) {
     })
 })
 
-chrome.webRequest.onBeforeRequest.addListener(function (req) {
-    console.log(url);
-    const url = new URL(req.url);
-    return {
-        redirectUrl: url.toString()
-    }},
-    {urls: ["https://amazon.com.au/*"]},
-    ["blocking"]);
+// chrome.webRequest.onBeforeRequest.addListener(function (req) {
+//     console.log(url);
+//     const url = new URL(req.url);
+//     return {
+//         redirectUrl: url.toString()
+//     }},
+//     {urls: ["https://amazon.com.au/*"]},
+//     ["blocking"]);
 
 // chrome.webRequest.onBeforeRequest.addListener(function (req) {
 //     console.log("hi");
